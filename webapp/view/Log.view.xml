@@ -3,6 +3,7 @@
 	xmlns:mvc="sap.ui.core.mvc"
 	displayBlock="true"
 	xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
 >
 	<Shell id="shell">
 		<App id="app">
@@ -12,24 +13,31 @@
 					title="{i18n>title}"
 				>
 					<content>
-						<Button
-							id="_IDErrorButton"
-							text="Log an Error"
-							press="onLogError"
-							type="Reject"
-						/>
-						<Button
-							id="_IDInfoButton"
-							text="Log an Info"
-							press="onLogInfo"
-							type="Default"
-						/>
-						<Button
-							id="_IDDebugButton"
-							text="Log a Debug Message"
-							press="onLogDebug"
-							type="Emphasized"
-						/>
+						<l:HorizontalLayout class="sapUiContentPadding">
+							<Button
+								id="_IDErrorButton"
+								text="Log an Error"
+								press="onLogError"
+								type="Reject"
+							/>
+							<Button
+								id="_IDWarnButton"
+								text="Log a Warning"
+								press="onLogWarning"
+								type="Ghost"
+							/>
+							<Button
+								id="_IDInfoButton"
+								text="Log an Info"
+								press="onLogInfo"
+							/>
+							<Button
+								id="_IDDebugButton"
+								text="Log a Debug Message"
+								press="onLogDebug"
+								type="Emphasized"
+							/>
+						</l:HorizontalLayout>
 					</content>
 				</Page>
 			</pages>
