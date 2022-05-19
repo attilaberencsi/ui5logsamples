@@ -1,0 +1,38 @@
+<mvc:View
+	controllerName="com.sapdev.demo.log.ui5consolelog.controller.Log"
+	xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true"
+	xmlns="sap.m"
+>
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page
+					id="page"
+					title="{i18n>title}"
+				>
+					<content>
+						<Button
+							id="_IDErrorButton"
+							text="Log an Error"
+							press="onLogError"
+							type="Reject"
+						/>
+						<Button
+							id="_IDInfoButton"
+							text="Log an Info"
+							press="onLogInfo"
+							type="Default"
+						/>
+						<Button
+							id="_IDDebugButton"
+							text="Log a Debug Message"
+							press="onLogDebug"
+							type="Emphasized"
+						/>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
