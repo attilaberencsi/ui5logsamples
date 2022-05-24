@@ -6,6 +6,7 @@ Samples to log messages in the console using the UI5 Log API, and to set the max
 
 ## Technical information
 
+|               |
 | ------------- |
 |**App Generator**<br>@sap/generator-fiori|
 |**App Generator Version**<br>1.4.6|
