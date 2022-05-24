@@ -69,6 +69,30 @@ sap.ui.define([
             onLogDebug: function () {
                 //Log.setLevel(4);
                 Log.debug(`SAPDEV: Hi this is an DEBUG message`, "Bla bla");
+            },
+
+            /**  
+             * You can dump complete JS Objects as well.
+             * Open Developer Tools / Console
+             * Activate Support Assistant with with:  Ctrl + Alt+ Shift + P or use function  Log.logSupportInfo(true)  programatically.
+             * Attention: The Object is dumped only if the above criterion are fullfilled ! 
+             */
+            logAnObject: function () {
+                Log.setLevel(4);
+                Log.logSupportInfo(true); // OR open Support Assistant with:  Ctrl + Alt+ Shift + P
+                var oObject = {
+                    Mamma: "Mia",
+                    Donna: "Clara",
+                    Mizeria: [1, 2, 3],
+                    Items: [{
+                        Apa: "Cuka",
+                        Funda: "Luka"
+                    }, {
+                        Apa: "Kave",
+                        Funda: "Duka"
+                    }]
+                };
+                Log.debug(`SAPDEV: Hi this is an DEBUG message`, "with Support Info and Object Details", "", () => oObject);
             }
 
         });

@@ -37,6 +37,12 @@
 								press="onLogDebug"
 								type="Emphasized"
 							/>
+							<Button
+								id="_IDLogObjectButton"
+								text="Log a Message dumping an Object"
+								press="logAnObject"
+								type="Transparent"
+							/>
 						</l:HorizontalLayout>
 					</content>
 				</Page>
